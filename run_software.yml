@@ -1,0 +1,25 @@
+---
+
+- hosts: all
+
+  vars:
+
+    # Directories
+    software_dir: "/root/Safeguard_for_sudo/ansible-privilege-manager/sources/6.1.1.0"
+
+    # Software
+    software_pkg_state:
+      plugin: check
+      server: check
+      agent: check
+
+    # Facts
+    software_facts_generate: true
+    software_facts_verbose: false
+
+    # Reports
+    software_reports_generate: true
+    software_reports_backup: false
+
+  roles:
+    - name: oneidentity.privilege_manager.software

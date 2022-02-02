@@ -6,18 +6,6 @@
   # The variables you would most likely want/need to override have been included
   vars:
 
-    # Join
-    join_server: 10.10.10.10
-
-    # Preflight
-    preflight_mode: server
-    preflight_verbose: false
-    preflight_extra_args:
-
-    # Directories
-    software_dir: /root/Safeguard_for_sudo/ansible-privilege-manager/sources/6.1.1.0
-    software_tmp_dir: /tmp/1id
-
     # Facts
     preflight_facts_generate: true
     preflight_facts_verbose: false
