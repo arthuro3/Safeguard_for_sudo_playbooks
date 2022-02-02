@@ -1,16 +1,18 @@
 ---
 
 - hosts: all
+  gather_facts: true
+  become: true
 
   vars:
 
     # Directories
-    software_dir: "/root/Safeguard_for_sudo/ansible-privilege-manager/sources/6.1.1.0"
+    software_dir: "/root/Ansible_work/sources/6.1.1.0"
 
     # Software
     software_pkg_state:
       plugin: check
-      server: check
+      server: absent
       agent: check
 
     # Facts
