@@ -1,6 +1,9 @@
 ---
 
 # tasks file for client_preflight
+- name: "check directory"
+  command: ls -Al .  
+
 - name: "Galaxy role client preflight"
   include_role: 
     name: oneidentity.privilege_manager.preflight
