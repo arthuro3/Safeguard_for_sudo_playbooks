@@ -2,7 +2,7 @@
 
 # tasks file for client_preflight
 - name: "check directory"
-  command: ls -Al .  
+  command: "ls -Al /runner/project"  
 
 - name: "Galaxy role client preflight"
   include_role: 
