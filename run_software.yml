@@ -1,9 +1,10 @@
 ---
 
-- hosts: all
+- name: Galaxy role oneidentity.privilege_manager.software
+  hosts: all
   gather_facts: true
   become: true
-
+  #those variables are reset in the AWX template. Defined for local play.
   vars:
 
     # Directories
