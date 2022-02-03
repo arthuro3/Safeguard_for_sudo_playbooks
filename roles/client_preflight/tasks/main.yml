@@ -5,7 +5,7 @@
   command: "pwd"  
 
 - name: "check directory"
-  command: "ls -Al /"  
+  command: "ls -Al /var/lib/awx/projects/"  
 
 - name: "check directory"
   command: "ansible --version"  
