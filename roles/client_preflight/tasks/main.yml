@@ -4,6 +4,12 @@
 - name: "check directory"
   command: "pwd"  
 
+- name: "check directory"
+  command: "ls -Al /"  
+
+- name: "check directory"
+  command: "ansible --version"  
+
 - name: "Galaxy role client preflight"
   include_role: 
     name: oneidentity.privilege_manager.preflight
