@@ -1,18 +1,7 @@
 ---
 
-- hosts: all
+- name: launch role client_preflight
+  hosts: all
   gather_facts: true
-
-  # The variables you would most likely want/need to override have been included
-  vars:
-
-    # Facts
-    preflight_facts_generate: true
-    preflight_facts_verbose: false
-
-    # Reports
-    preflight_reports_generate: true
-    preflight_reports_backup: false
-
   roles:
-    - name: oneidentity.privilege_manager.preflight
+    - name: client_preflight
