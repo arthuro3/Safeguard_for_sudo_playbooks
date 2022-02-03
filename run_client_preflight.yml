@@ -1,7 +1,14 @@
 ---
 
-- name: launch role client_preflight
+- name: Launch  galaxy role client_preflight
   hosts: all
   gather_facts: true
+  vars:
+    - software_dir: "/root/Ansible_work/Safeguard_for_sudo_playbooks/roles/client_preflight/files/6.1.1.0"
+    - software_tmp_dir: /tmp/1id
+    - preflight_facts_generate: true
+    - preflight_facts_verbose: false
+    - preflight_reports_generate: true
+    - preflight_reports_backup: false
   roles:
-    - name: client_preflight
+    - name: oneidentity.privilege_manager.preflight
