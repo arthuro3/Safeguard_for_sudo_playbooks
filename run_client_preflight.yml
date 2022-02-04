@@ -3,6 +3,7 @@
 - name: Galaxy role oneidentity.privilege_manager.preflight
   hosts: all
   gather_facts: true
+  become: true
   vars:
     - software_dir: "/root/Ansible_work/sources/6.1.1.0"
     - software_tmp_dir: /tmp/1id
