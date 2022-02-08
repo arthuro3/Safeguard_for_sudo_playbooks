@@ -10,6 +10,6 @@
   tasks:
     - shell: |
         /opt/quest/sbin/pmsrvconfig -a --batch -q <<' EOF'
-        "{{ pwd_pmserver }}"
-        "{{ pwd_pmserver }}"
-        "EOF"  
+        {{ pwd_pmserver }}
+        {{ pwd_pmserver }}
+        EOF
