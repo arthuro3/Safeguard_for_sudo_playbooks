@@ -13,7 +13,7 @@
     # Software
     software_pkg_state:
       plugin: check
-      server: present
+      server: absent
       agent: check
 
     # Facts
