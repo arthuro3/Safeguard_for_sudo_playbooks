@@ -1,0 +1,15 @@
+
+---
+
+- name:  run the pmsrvconfig cmd in bath mode
+  hosts: all
+  gather_facts: true
+  become: true
+  vars:
+    - pwd_pmserver: "jfrbbur6ldM%45"
+  tasks:
+    - shell: |
+        /opt/quest/sbin/pmsrvconfig -a --batch -q <<' EOF'
+        "{{ pwd_pmserver }}"
+        "{{ pwd_pmserver }}"
+        "EOF"  
