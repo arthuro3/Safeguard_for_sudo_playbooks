@@ -1,0 +1,11 @@
+---
+
+- name: Galaxy role oneidentity.privilege_manager.sudo_policy_for_unix_host
+  hosts: all
+  gather_facts: true
+  become: true
+  vars:
+    - sudo_policy_for_unix_host_reports_generate: true
+    - sudo_policy_for_unix_host_reports_backup: false
+  roles:
+    - name: oneidentity.privilege_manager.sudo_policy_for_unix_host

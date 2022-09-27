@@ -11,5 +11,7 @@
     - preflight_facts_verbose: true
     - preflight_reports_generate: true
     - preflight_reports_backup: true
+    - preflight_mode: sudo
+    - join_server: 192.168.193.135
   roles:
     - name: oneidentity.privilege_manager.preflight

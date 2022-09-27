@@ -10,12 +10,12 @@
 
     # Join
     join_server: 192.168.193.135
-    join_state: "joined"
-    join_password: "jfrbbur6ldM%45"
+    join_state: "unjoined"
+    join_password: "njfrbbur6ldM%45"
 
     # Facts
     join_facts_generate: true
-    join_facts_verbose: false
+    join_facts_verbose: true
 
     # Reports
     join_reports_generate: true

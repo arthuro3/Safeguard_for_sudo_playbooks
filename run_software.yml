@@ -12,8 +12,8 @@
 
     # Software
     software_pkg_state:
-      plugin: check
-      server: absent
+      plugin: present
+      server: check
       agent: check
 
     # Facts
