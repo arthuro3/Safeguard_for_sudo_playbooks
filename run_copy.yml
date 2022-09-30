@@ -6,8 +6,8 @@ become: true
 tasks:
   - name: copy affective
     ansible.builtin.copy:
-		  src: /var/lib/awx/projects/_17__sfgd_4_sudo_git/sudo_plugin/linux-x86_64/qpm-plugin-7.2.0.2-1.x86_64.rpm
-			dest: /root
-			owner: root
-			group: root
-			mode: u=rw,g=rw,o=r
+      src: /var/lib/awx/projects/_17__sfgd_4_sudo_git/sudo_plugin/linux-x86_64/qpm-plugin-7.2.0.2-1.x86_64.rpm
+      dest: /root
+      owner: root
+      group: root
+      mode: u=rw,g=rw,o=r
