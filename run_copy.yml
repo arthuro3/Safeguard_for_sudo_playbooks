@@ -6,7 +6,7 @@
   tasks:
   - name: copy affective
     ansible.builtin.copy:
-      src: ./sudo_plugin/linux-x86_64/qpm-plugin-7.2.0.2-1.x86_64.rpm
+      src: sudo_plugin/linux-x86_64/qpm-plugin-7.2.0.2-1.x86_64.rpm
       dest: /root
       owner: root
       group: root
