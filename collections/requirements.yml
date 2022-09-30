@@ -2,3 +2,4 @@
 
 collections:
   - name: oneidentity.authentication_services
+  - name: oneidentity.privilege_manager
