@@ -1,0 +1,13 @@
+---
+- name: copy packages
+hosts: all
+become: true
+
+tasks:
+  - name: copy affective
+    ansible.builtin.copy:
+		  src: xxx
+			dest: /root
+			owner: root
+			group: root
+			mode: u=rw,g=rw,o=r
