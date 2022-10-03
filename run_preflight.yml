@@ -3,7 +3,7 @@
 - name: galaxy role oneidentity.privilege_manager.preflight
   hosts: all
   gather_facts: false
-	become: true
+  become: true
 
   # The variables you would most likely want/need to override have been included
   vars:
