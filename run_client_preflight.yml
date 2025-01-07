@@ -5,13 +5,13 @@
   gather_facts: true
   become: true
   vars:
-    - software_dir: "/root/Ansible_work/sources/6.1.1.0"
+    - software_dir: "/home/ansible/.ansible/software/7.2.3.3"
     - software_tmp_dir: /tmp/1id
     - preflight_facts_generate: true
     - preflight_facts_verbose: true
     - preflight_reports_generate: true
     - preflight_reports_backup: true
     - preflight_mode: sudo
-    - join_server: 192.168.193.135
+    - join_server: 10.0.0.9
   roles:
     - name: oneidentity.privilege_manager.preflight
