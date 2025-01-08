@@ -1,17 +1,37 @@
 ---
 
-- name: Galaxy role oneidentity.privilege_manager.preflight
+- name: galaxy role oneidentity.privilege_manager.preflight
   hosts: all
-  gather_facts: true
+  gather_facts: false
   become: true
+
+  # The variables you would most likely want/need to override have been included
   vars:
-    - software_dir: "/home/ansible/.ansible/software/7.2.3.3"
-    - software_tmp_dir: /tmp/1id
-    - preflight_facts_generate: true
-    - preflight_facts_verbose: true
-    - preflight_reports_generate: true
-    - preflight_reports_backup: true
-    - preflight_mode: sudo
-    - join_server: 10.0.0.9
+
+    # Join
+    #join_server: 10.0.0.9
+
+    # Preflight
+    preflight_mode: server
+    preflight_verbose: false
+    preflight_extra_args: ''
+
+    # Directories
+    software_dir: "/home/ansible/.ansible/software/7.3.0.2"
+    software_tmp_dir: /tmp/1id
+
+    # Facts
+    preflight_facts_generate: true
+    preflight_facts_verbose: false
+
+    # Reports
+    preflight_reports_generate: true
+    preflight_reports_backup: false
+    preflight_reports_host: "127.0.0.1"
+    preflight_reports:
+     - src:  preflight_report.csv.j2
+       dest: /tmp/reports/preflight_report.csv
+    reports_details_format: json
+
   roles:
     - name: oneidentity.privilege_manager.preflight
