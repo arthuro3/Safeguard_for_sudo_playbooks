@@ -4,7 +4,7 @@
   become: true
 
   tasks:
-  - name: copy affective
+  - name: copy effective
     ansible.builtin.copy:
       src: "linux-x86_64/qpm-plugin-7.2.0.2-1.x86_64.rpm"
       dest: /root

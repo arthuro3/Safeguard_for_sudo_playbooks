@@ -12,9 +12,9 @@
 
     # Software
     software_pkg_state:
-      plugin: present
-      server: check
-      agent: check
+      plugin: check
+      server: absent
+      agent: absent
 
     # Facts
     software_facts_generate: true
