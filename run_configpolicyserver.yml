@@ -6,7 +6,7 @@
   gather_facts: true
   become: true
   vars:
-    - pwd_pmserver: "jfrbbur6ldM%45"
+    - pwd_pmserver: "XXXXXXXX"
   tasks:
     - shell: |
         /opt/quest/sbin/pmsrvconfig -a --batch -q <<' EOF'
