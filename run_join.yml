@@ -9,9 +9,9 @@
   vars:
 
     # Join
-    join_server: 192.168.193.135
-    join_state: "unjoined"
-    join_password: "njfrbbur6ldM%45"
+    join_server: 10.0.0.9
+    join_state: "joined"
+    join_password: "Password1!"
 
     # Facts
     join_facts_generate: true
@@ -20,6 +20,10 @@
     # Reports
     join_reports_generate: true
     join_reports_backup: false
+    join_reports_host: "localhost"
+    join_reports:
+      - src:  join_report.csv.j2
+        dest: /tmp/reports/join_report.csv
 
   roles:
     - name: oneidentity.privilege_manager.join

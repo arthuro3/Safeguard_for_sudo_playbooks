@@ -8,7 +8,7 @@
   vars:
 
     # Directories
-    software_dir: "/root/Ansible_work/sources/6.1.1.0"
+    software_dir: "/home/ansible/.ansible/software/7.3.0.2"
 
     # Software
     software_pkg_state:
@@ -23,6 +23,10 @@
     # Reports
     software_reports_generate: true
     software_reports_backup: false
+    software_reports_host: "localhost"
+    software_reports:
+     - src:  software_report.csv.j2
+       dest: /tmp/reports/software_report.csv
 
   roles:
     - name: oneidentity.privilege_manager.software

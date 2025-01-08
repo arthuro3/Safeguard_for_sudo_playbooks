@@ -9,7 +9,7 @@
   vars:
 
     # Sudoers
-    sudoers_tmp_dir: /tmp/1id_sudoers
+    sudoers_tmp_dir: /tmp/lid_sudoers
     sudoers_passwd_mode: file
     sudoers_group_mode: file
     sudoers_sudoers_mode: file
@@ -17,6 +17,10 @@
     # Reports
     sudoers_reports_generate: true
     sudoers_reports_backup: false
+    sudoers_reports_host: "localhost"
+    sudoers_reports:
+      - src:  sudoers_report.csv.j2
+        dest: /tmp/reports/sudoers_report.csv
 
   roles:
     - name: oneidentity.privilege_manager.sudoers
